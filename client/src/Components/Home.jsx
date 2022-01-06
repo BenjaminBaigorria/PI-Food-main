@@ -4,19 +4,37 @@ import { getAllRecipes } from "../actions";
 import Card from "./Card";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import SearchBar from "./SearchBar";
+import Pagination from "./Pagination";
+import { useState } from "react";
 
 function Home() {
   const dispatch = useDispatch();
   const allRecipes = useSelector((state) => state.recipes);
-  console.log(allRecipes);
+
+  const [page, setPage] = useState(1);
+  const [recipeNum] = useState(9);
+
+  var lastI = page * recipeNum;
+  var firstI = lastI - recipeNum;
+
   useEffect(() => {
     dispatch(getAllRecipes());
   }, [dispatch]);
 
+
+  const paginado = (x) => {
+    setPage(x);
+  };
+
+  const allPagesR = allRecipes.slice(firstI, lastI);
+
   return (
     <div>
       <NavLink to="/">Go Back</NavLink>
-      <div>component search</div>
+      <div>
+        <SearchBar></SearchBar>
+      </div>
       <div>
         <select>
           Orden
@@ -33,19 +51,28 @@ function Home() {
         </select>
       </div>
       <div>
-        {allRecipes.map((e) => {
-          return (
-          <Card 
-           key={e.id}
-           title={e.title}
-           image={e.image}
-           diets={
-               e.dataBase?
-               e.diets.map((el)=>el.name):
-               e.diets.map((el)=>el)
-           }>
-           </Card>)
-        })}
+        <div>
+          <Pagination
+            allrecipes={allRecipes.length}
+            paginado={paginado}
+            recipeNum={recipeNum}
+          />
+          {allPagesR.map((e) => {
+            return (
+              <Card
+                id={e.id}
+                key={e.id}
+                title={e.title}
+                image={e.image}
+                diets={
+                  e.dataBase
+                    ? e.diets.map((el) => el.name)
+                    : e.diets.map((el) => el)
+                }
+              ></Card>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

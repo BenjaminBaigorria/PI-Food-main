@@ -1,1 +1,3 @@
 export const GET_ALL_RECIPES="GET_ALL_RECIPES"
+export const GET_RECIPE_ID="GET_RECIPE_ID"
+export const SEARCH_RECIPE="SEARCH_RECIPE"
