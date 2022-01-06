@@ -33,7 +33,7 @@ router.get("/",async(req,res)=>{
 router.get("/:id",async(req,res)=>{
     const {id} = req.params
     var idString=id.toString()
-    if(idString.length>7){
+    if(idString.length>8){
         const createdDB = await Recipe.findAll({
             where:{
                 id: id
@@ -53,14 +53,14 @@ router.get("/:id",async(req,res)=>{
 router.post("/",async(req,res)=>{
     let {title,summary,spoonacularScore,healthScore,analizedStructions,image,diet}=req.body
 
-    const addRecipe= await Recipe.create({
+    const addRecipe= await Recipe.create([{
         title,
         summary,
         spoonacularScore,
         healthScore,
         analizedStructions,
         image,
-    })
+    }])
     if(diet){
         const createdDB= await Diet.findAll({
             where:{
@@ -68,9 +68,9 @@ router.post("/",async(req,res)=>{
             }
         })
         await addRecipe.addDiets(createdDB)
-        return res.status(200).send("Recipe created")
+        return res.status(200).send(addRecipe)
     }
-    return res.status(200).send("Recipe created");
+    return res.status(200).send(addRecipe);
 })
 
 module.exports=router
