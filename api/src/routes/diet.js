@@ -15,6 +15,7 @@ router.get("/",async(req,res)=>{
     var variable=propDiet.join(",").split(",")
     
     for(let i=0;i<variable.length;i++){
+        if(variable[i].length<1){variable[i]="ketogenic"}
         await Diet.findOrCreate({
             where:{
                 name: variable[i],

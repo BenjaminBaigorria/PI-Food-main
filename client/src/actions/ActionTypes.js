@@ -1,3 +1,8 @@
 export const GET_ALL_RECIPES="GET_ALL_RECIPES"
 export const GET_RECIPE_ID="GET_RECIPE_ID"
 export const SEARCH_RECIPE="SEARCH_RECIPE"
+export const ORDER_ABC="ORDER_ABC"
+export const ORDER_RANK="ORDER_RANK"
+export const POST_RECIPE="POST_RECIPE"
+export const GET_DIETS="GET_DIETS"
+export const FILTER_DIETS="FILTER_DIETS"

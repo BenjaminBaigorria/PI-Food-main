@@ -13,7 +13,8 @@ function Details() {
     useEffect(() => {
         dispatch(getId(id))
     },[dispatch,id])
-
+  
+    console.log(details)
 
     var i=1;
     return (
@@ -39,7 +40,7 @@ function Details() {
                 <div>
                     {
                     details[0]?.dataBase?
-                    <h2>k</h2>:
+                    <h2>{details[0]?.analizedStructions}</h2>://modificar con analizedStructions
                     details[0]?.analyzedInstructions[0]?.steps?.map(e=>
                         <div>
                             <h2>Paso: {e.number}</h2>
