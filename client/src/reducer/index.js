@@ -28,15 +28,19 @@ function rootReducer(state=initialState,action){
                 recipes: action.payload
             }
         case ORDER_ABC:
-            
+            if(action.payload==="default"){
+                return{
+                    ...state
+                }
+            }
             const order=action.payload==="Alfabetico +"?
-                state.recipes.sort((a,b)=>{
+                state.recipes?.sort((a,b)=>{
                  if(a.title>b.title){return 1}
                  else if(a.title<b.title){return -1}      //---------2--------------6--------------8
                  else{return 0}
                 })
             :
-                state.recipes.sort((a,b)=>{
+                state.recipes?.sort((a,b)=>{
                   if(a.title>b.title){return -1}
                   else if(a.title<b.title){return 1}
                   else{return 0}
@@ -46,7 +50,11 @@ function rootReducer(state=initialState,action){
                     recipes:order
                 }
         case ORDER_RANK:
-            
+            if(action.payload==="default"){
+                return{
+                    ...state
+                }
+            }
             const orderR=action.payload==="Rating +"?
             state.recipes.sort((a,b)=>{
                 return b.spoonacularScore-a.spoonacularScore
@@ -69,6 +77,12 @@ function rootReducer(state=initialState,action){
             }
         case FILTER_DIETS:
             var arrDet=[]
+            if(action.payload==="all"){
+                return {
+                    ...state,
+                  recipes: state.allRecipes
+                }
+            }
            
             for(var i=0;i<state.allRecipes.length;i++){
               if(!state.allRecipes[i].dataBase){

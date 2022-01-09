@@ -1,0 +1,16 @@
+body{
+    background: url(C:\Users\benja\Desktop\food-pi\PI-Food-main\client\src\styles\img\big-Foods-img.jpeg);
+    background-blend-mode: darken;
+    background-position: right top;
+    background-size: cover;
+}
+@font-face {
+    font-family: "qlikers";
+    src: url(./fonts/TheQlickers-Regular.ttf);
+}
+
+.font{
+    font-family: "qlikers";
+    font-size: 24px;
+    color: white;
+}

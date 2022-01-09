@@ -23,9 +23,10 @@ function PostRecipe() {
   var keysForm = 1;
 
   function handleChange(e) {
+    e.preventDefault()
     setInput({
       ...input,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1),
       diet: e.target.value,
     });
   }
@@ -47,19 +48,20 @@ function PostRecipe() {
       setInput({
         ...input,
         diet: [...input.diet, e.target.value],
-      });
+      })
     } else {
       setInput({
         ...input,
-        diet: input.diet.filter((e) => e !== e.target.value),
+        diet: input.diet?.filter(t => t !== e.target.value)
       });
     }
   }
-
+  
   useEffect(() => {
     dispatch(getDiets());
   }, [dispatch]);
-
+  
+  console.log(input.diet)
 
   return (
     <div>
@@ -87,17 +89,17 @@ function PostRecipe() {
           <div>
             <div>
               {diet?.map((e) => (
-                <div key={keysForm++}>
+                <div>
                   <div>
                     <label>
                       <h2>{e.name}</h2>
                     </label>
                   </div>
                   <input
+                    value={e.name}
                     onChange={(e) => handleCheck(e)}
                     type="checkbox"
                     name={e.name}
-                    value={e.name}
                   ></input>
                 </div>
               ))}
