@@ -28,11 +28,6 @@ function rootReducer(state=initialState,action){
                 recipes: action.payload
             }
         case ORDER_ABC:
-            if(action.payload==="default"){
-                return{
-                    ...state
-                }
-            }
             const order=action.payload==="Alfabetico +"?
                 state.recipes?.sort((a,b)=>{
                  if(a.title>b.title){return 1}
@@ -50,11 +45,6 @@ function rootReducer(state=initialState,action){
                     recipes:order
                 }
         case ORDER_RANK:
-            if(action.payload==="default"){
-                return{
-                    ...state
-                }
-            }
             const orderR=action.payload==="Rating +"?
             state.recipes.sort((a,b)=>{
                 return b.spoonacularScore-a.spoonacularScore

@@ -1,0 +1,88 @@
+.pages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@font-face {
+    font-family: "box" ;
+    src: url(C:\Users\benja\Desktop\food-pi\PI-Food-main\client\src\styles\fonts\MilestoneFreeVersion-Script.otf);
+}
+
+
+
+.pages .create{
+  color: rgb(236, 8, 8);
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  background: rgba(8, 3, 0, 0.472);
+  color: rgb(243, 243, 239);
+  font-family: "box";
+  size: 100%;
+  font-size: 40px;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 15px;
+  border:ridge;
+  border-color: rgba(255, 255, 255, 0.781);
+}
+.pages .create:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(253, 253, 252, 0.52);
+    border-color: black;
+}
+.pages .pagesNum{
+  display: grid;
+  grid-template-columns: 100%;
+}
+.pages .pagesNum .pagesButtom{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  background: rgba(8, 3, 0, 0.472);
+  color: rgb(243, 243, 239);
+  font-family: "box";
+  size: 100%;
+  font-size: 30px;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 15px;
+  border:ridge;
+  border-color: rgba(255, 255, 255, 0.781);
+}
+.pages .pagesNum .pagesButtom:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(253, 253, 252, 0.52);
+    border-color: black;
+}
+
+.filters select{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  background: rgba(8, 3, 0, 0.472);
+  color: rgb(243, 243, 239);
+  font-family: "qlikers";
+  size: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 10px;
+  border:ridge;
+  border-color: rgba(255, 255, 255, 0.781);
+}
+.goback{
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  background: rgba(8, 3, 0, 0.472);
+  color: rgb(243, 243, 239);
+  font-family: "qlikers";
+  size: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s ease all;
+  border-radius: 10px;
+  border:ridge;
+  border-color: rgba(255, 255, 255, 0.781);
+}

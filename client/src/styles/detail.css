@@ -1,0 +1,115 @@
+.detail{
+    background-color: rgba(93, 15, 5, 0.479);
+    border-radius: 60px;
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.945);
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    overflow: hidden;
+    border:ridge;
+    border-color: rgb(189, 189, 189);
+    position: static;
+}
+.detail h1{
+    font-family: "qlikers";
+    color: white;
+    font-size: 60px;
+    background-color: rgba(245, 3, 3, 0.479);
+    border-radius: 30px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.945);
+    margin-left: 80px;
+    margin-right: 80px;
+    overflow: hidden;
+    border:ridge;
+    border-color: black;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    width: 624px;
+    height: 462px; 
+    border-radius: 30px;
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.637);
+    object-fit: cover;
+    margin-top: 20px;
+    border:ridge;
+    border-color: rgb(0, 0, 0);
+}
+.steps{
+    background-color: rgba(190, 10, 10, 0.459);
+    border-radius: 60px;
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.945);
+    margin-left: 80px;
+    margin-right: 80px;
+    overflow: hidden;
+    transition: 0.3s;
+    border:ridge;
+    border-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.steps h2{
+    font-family: "qlikers";
+    color: white;
+}
+.steps h4{
+    font-family: "qlikers";
+    color: white;
+}
+.steps:hover{
+   transform: scale(1.1);
+   border-color: white;
+}
+.summary{
+    background-color: rgba(190, 10, 10, 0.459);
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.945);
+    margin-left: 220px;
+    margin-right: 220px;
+    overflow: hidden;
+    transition: 0.5s;
+    border:ridge;
+    border-color: rgb(0, 0, 0);
+    font-family: "qlikers";
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    transition: 0.5s;
+    
+}
+.summary:hover{
+    transform: scale(1.3);
+    background-color: black;
+    border-color: white;
+}
+
+.diets{
+    font-family: "qlikers";
+    color: white;
+    margin-top: -10px;
+}
+.diets h3{
+    margin-top: -20px;
+}
+.rathea h5{
+    background-color: rgba(190, 10, 10, 0.459);
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.945);
+    margin-left: 500px;
+    margin-right: 500px;
+    overflow: hidden;
+    transition: 0.5s;
+    border:ridge;
+    border-color: rgb(0, 0, 0);
+    font-family: "qlikers";
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    transition: 0.5s;
+}
+.rathea h5:hover{
+    transform: scale(1.1);
+    border-color: white;
+}

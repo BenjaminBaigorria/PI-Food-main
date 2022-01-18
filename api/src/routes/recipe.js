@@ -30,6 +30,7 @@ router.get("/",async(req,res)=>{
     return res.status(200).send(allrecipes)
   }
 })
+
 router.get("/:id",async(req,res)=>{
     const {id} = req.params
     var idString=id.toString()

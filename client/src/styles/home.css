@@ -1,8 +1,9 @@
 body{
     background: url(C:\Users\benja\Desktop\food-pi\PI-Food-main\client\src\styles\img\big-Foods-img.jpeg);
     background-blend-mode: darken;
-    background-position: right top;
-    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 @font-face {
     font-family: "qlikers";
@@ -11,6 +12,6 @@ body{
 
 .font{
     font-family: "qlikers";
-    font-size: 24px;
+    font-size: 22px;
     color: white;
 }

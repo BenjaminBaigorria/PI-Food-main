@@ -13,8 +13,8 @@ function Card(props) {
             </div>
             <h2>{props.title}</h2>
             </NavLink>
-            <h4>Diets</h4>
-            <div className=''>
+            <h3>Diets:</h3>
+            <div>
                 {props.diets.map(e=>(<h5  key={i++}>{e}</h5>))}
             </div>
         </div>

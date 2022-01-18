@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "boxx";
+    src: url(C:\Users\benja\Desktop\food-pi\PI-Food-main\client\src\styles\fonts\MilestoneFreeVersion-Script.otf);
+}
+
+.bigTitle{
+    font-family:"boxx";
+    color: chocolate;
+    font-size: 60px;
+    transition: 1s;
+    background-image: url(C:\Users\benja\Desktop\food-pi\PI-Food-main\client\src\styles\img\Texture_Wood_planks_Multicolor_517419_1920x1080.jpg) ;
+    background-position: bottom;
+    border:ridge;
+    border-radius: 50px;
+}
+.bigTitle:hover{
+    color: black;
+    background-position: top;
+}

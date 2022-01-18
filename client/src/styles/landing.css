@@ -1,0 +1,58 @@
+
+.button{
+    width: 260px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 65px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 10px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+  .button:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .button:focus {
+    outline:chocolate;
+  }
+  
+  .button{
+    background-image: linear-gradient(
+      to right,
+      #770602,
+      #020202,
+      #000000,
+      #900606
+    );
+    box-shadow: 0 2px 20px 10px rgb(221, 83, 3);
+  }
+
+
+  .foods{
+    font-family:"boxx";
+    color: rgb(248, 72, 2);
+    font-size: 250px;
+    transition: 3s;
+    background-image: linear-gradient(
+        to right,
+        #770602,
+        #020202,
+        #000000,
+        #900606);
+  }
+  .foods:hover{
+    background-position: 100% 0;
+    box-shadow: 0 2px 20px 10px rgb(182, 69, 3);
+    transition: 1s;
+  }

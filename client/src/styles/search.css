@@ -1,0 +1,36 @@
+.Search button{
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    background: rgba(8, 3, 0, 0.472);
+    color: rgb(243, 243, 239);
+    font-family: "box";
+    size: 100%;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 15px;
+    border:ridge;
+    border-color: rgba(255, 255, 255, 0.781);
+}
+.Search button:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgba(253, 253, 252, 0.52);
+    border-color: black;
+}
+.Search input{
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    background: rgba(8, 3, 0, 0.472);
+    color: rgb(243, 243, 239);
+    size: 100%;
+    font-size: 55px;
+    font-family: "qlikers";
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 15px;
+    border:ridge;
+    border-color: rgba(255, 255, 255, 0.781);
+    
+}

@@ -1,25 +1,27 @@
 import React from 'react'
+import "../styles/pagination.css"
 
 function Pagination({allrecipes,recipeNum,paginado}) {
 
     const pageNum=[]
-
-    for(var i=1;i<= Math.ceil(allrecipes/recipeNum);i++){
-        pageNum.push(i)
-    }
+  if(allrecipes>9){
+      for(var i=1;i<= Math.ceil(allrecipes/recipeNum);i++){
+          pageNum.push(i)
+      }
+  }
     return (
-        <nav>
-            <ul>
+        
+            <div className='pages'>
                 {
                     pageNum &&
                     pageNum.map(e =>
-                        <li key={e}>
-                            <button onClick={()=>paginado(e)}>{e}</button>
-                        </li>)
+                        <div className="pagesNum" key={e}>
+                            <button className="pagesButtom" onClick={()=>paginado(e)}>{e}</button>
+                        </div>)
                 }
-            </ul>
+            </div>
             
-        </nav>
+        
     )
 }
 
